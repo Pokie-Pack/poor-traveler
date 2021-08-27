@@ -11,34 +11,22 @@ const typeDefs = gql`
     lodging: String,
     activity: [String],
     cost: Number,
+    travelPackage: [TravelPackage]
   }
 
   type user {
-    _id: ID
-    firstName: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    lastName: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    password: {
-      type: String,
-      required: true,
-      minlength: 5,
-    },
+    type User {
+      _id: ID
+      firstName: String
+      lastName: String
+      email: String
+      password: String
+    }
   }
 
   type Query {
-    user: User
+    user: [User]
+    travelPackage: [TravelPackage]
   }
 
   type Mutation {
