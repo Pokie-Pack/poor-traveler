@@ -4,8 +4,8 @@ const { Schema } = mongoose;
 
 const travelpackageSchema = new Schema({
   location: String,
-  climate: [String],
-  topography: [String],
+  climate: String,
+  topography: String,
   airfare: Boolean,
   transportation: String,
   lodging: String,
