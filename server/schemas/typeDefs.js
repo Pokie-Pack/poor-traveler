@@ -4,14 +4,14 @@ const typeDefs = gql`
   type travelPackage {
     _id: ID
     location: String,
-    climate: [String],
-    topography: [String],
-    airfare: Boolean,
-    transportation: String,
-    lodging: String,
-    activity: [String],
+    climate: String,
+    topography: [String],  
+    airfare: Boolean, 
+    transportation: String, 
+    lodging: String, 
+    activity: [String], 
     cost: Float,
-    travelPackage: [TravelPackage]
+    travel Package: [TravelPackage]
   }
 
   type user {
