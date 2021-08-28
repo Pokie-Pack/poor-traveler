@@ -29,6 +29,11 @@ const typeDefs = gql`
     travelPackage: [TravelPackage]
   }
 
+  type Auth {
+    token: ID
+    user: User
+  }
+
   type Mutation {
     addUser(
       firstName: String!
