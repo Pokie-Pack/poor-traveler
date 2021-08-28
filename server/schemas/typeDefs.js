@@ -10,7 +10,7 @@ const typeDefs = gql`
     transportation: String,
     lodging: String,
     activity: [String],
-    cost: Number,
+    cost: Float,
     travelPackage: [TravelPackage]
   }
 
@@ -26,7 +26,7 @@ const typeDefs = gql`
 
   type Query {
     user: [User]
-    travelPackage: [TravelPackage]
+    travelPackage(activity: [String], location: String, climate: String, topography: String): [TravelPackage]
   }
 
   type Auth {
