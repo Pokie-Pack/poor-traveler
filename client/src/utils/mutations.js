@@ -11,6 +11,11 @@ export const LOGIN = gql`
   }
 `;
 
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
+
 export const ADD_USER = gql`
   mutation addUser(
     $firstName: String!
