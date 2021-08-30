@@ -18,7 +18,18 @@ const resolvers = {
 
       throw new AuthenticationError("Not logged in");
     },
+
+    TravelPackage: async (parent, args, context) => {
+      const query = {...args};
+      if (args.activity) {
+        query["activity"] = { "$all": args.activity };
+      }
+     
+      return await TravelPackage.find(args);
+    },
   },
+
+
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
@@ -51,20 +62,6 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
-    },
-  },
-
-  Query: {
-    TravelPackage: async () => {
-      // Populate the classes and professor subdocuments when querying for schools
-      return await TravelPackage.find({warm, chilly}).populate('beach', 'inland', 'mountain', 'coastal')
-      },
-    warm: async () => {
-      // Populate the professor subdocument when querying for classes
-      return await Class.find({beach, inland}).populate('location','climate', 'topography', 'airfare', ' transportation', 'lodging', ['activity'], cost )
-    },
-    chilly: async () => {
-      return await Professor.find({mountain, coastal}).populate('location','climate', 'topography', 'airfare', ' transportation', 'lodging', ['activity'], cost)
     },
   },
 };
