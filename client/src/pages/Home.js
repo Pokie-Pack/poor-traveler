@@ -1,5 +1,4 @@
-import React from "react";
-// import Jumbotron from "../components/Jumbotron";
+import React, { useState } from "react";
 import StepWizard from "react-step-wizard";
 import Step1 from "../components/Step1";
 import Step2 from "../components/Step2";
@@ -7,15 +6,29 @@ import Step3 from "../components/Step3";
 import Step4 from "../components/Step4";
 
 const Home = () => {
+  const [formState, setFormState] = useState({
+    climate: "",
+    location: "",
+    topography: "",
+    airfare: "",
+    transportation: "",
+    lodging: "",
+    activity: [],
+  });
+
+  const handleStateChange = (field, value) => {
+    console.log(field + " was changed to " + value);
+    setFormState((prev) => {
+      return { ...prev, [field]: value };
+    });
+  };
+
   return (
     <div className="container">
-      {/* <Jumbotron>
-        <h1>Starter Stack</h1>
-        <p>We are here to be awesome</p>
-     </Jumbotron> */}
       <StepWizard>
-        <Step1 />
+        <Step1 onChange={handleStateChange} selected={formState.climate} />
         <Step2 />
+
         <Step3 />
         <Step4 />
       </StepWizard>
