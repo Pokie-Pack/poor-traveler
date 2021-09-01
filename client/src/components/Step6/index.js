@@ -6,15 +6,15 @@ function Step6(props) {
     <div className="container">
       <h1> Step 5: Preferred place to stay?</h1>
       <RadioButtons
-        name="stay"
+        name="lodging"
         options={[
-          { value: "Hotel", label: "HOTEL", class: "stay-hotel-button" },
+          { value: "Hotel", label: "HOTEL", class: "lodging-hotel-button" },
           {
             value: "Hostel",
             label: "HOSTEL",
-            class: "stay-hostel-button",
+            class: "lodging-hostel-button",
           },
-          { value: "B&B", label: "B&B", class: "stay-bnb-button" },
+          { value: "B&B", label: "B&B", class: "lodging-bnb-button" },
         ]}
         onChange={props.onChange}
         selected={props.selected}

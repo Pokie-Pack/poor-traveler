@@ -6,17 +6,17 @@ function Step3(props) {
     <div className="container">
       <h1> Step 2: Click your preferred TERRAIN please</h1>
       <RadioButtons
-        name="terrain"
+        name="topography"
         options={[
           {
             value: "Mountain",
             label: "MOUNTAIN",
-            class: "terrain-mountain-button",
+            class: "topography-mountain-button",
           },
           {
             value: "Coastal",
             label: "COASTAL",
-            class: "terrain-coastal-button",
+            class: "topography-coastal-button",
           },
         ]}
         onChange={props.onChange}
