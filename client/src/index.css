@@ -99,7 +99,7 @@ button {
   background-color: var(--secondary);
   display: inline-block;
 }
-buttonWarm {
+.climate-warm-button {
   font-size: 3rem;
   text-decoration: none;
   padding: 1rem 1rem;
