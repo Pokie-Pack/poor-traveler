@@ -6,17 +6,15 @@ const resolvers = {
   Query: {
     user: async (parent, args, context) => {
       if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          TravelPackage,
-        });
-
-        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+        
+        const user = await User.findById(context.user._id).populate("travelpackages");
 
         return user;
       }
 
       throw new AuthenticationError("Not logged in");
     },
+
     travelPackages: async (parent, args, context) => {
       const query = { ...args };
 
@@ -26,6 +24,8 @@ const resolvers = {
       return await TravelPackage.find(query);
     },
   },
+
+
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
