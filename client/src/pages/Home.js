@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import Jumbotron from "../components/Jumbotron";
 import StepWizard from "react-step-wizard";
 import Step1 from "../components/Step1";
 import Step2 from "../components/Step2";
@@ -15,6 +16,8 @@ const Home = () => {
     lodging: "",
     activity: [],
   });
+
+  // TODO: how do I use useQuery from week 21 activites 13 and 14 to query the travel packages
 
   const handleStateChange = (field, value) => {
     console.log(field + " was changed to " + value);
