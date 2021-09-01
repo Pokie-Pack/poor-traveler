@@ -1,26 +1,27 @@
 import React from "react";
+import RadioButtons from "../RadioButtons";
 
 function Step3(props) {
   return (
-    <div>
-      <h1> Step 3: Preferred transportation?</h1>
-      <p>
-        <button onClick={props.nextStep} type="checkbox">
-          AIR
-        </button>
-      </p>
-      <p>
-        <button onClick={props.nextStep}>CAR</button>
-      </p>
-      <p>
-        <button onClick={props.nextStep}>CRUISE</button>
-      </p>
-      <p>
-        <button onClick={props.nextStep}>RV</button>
-      </p>
-      <p>
-        <button onClick={props.previousStep}>Previous Step</button>
-      </p>
+    <div className="container">
+      <h1> Step 2: Click your preferred TERRAIN please</h1>
+      <RadioButtons
+        name="terrain"
+        options={[
+          {
+            value: "Mountain",
+            label: "MOUNTAIN",
+            class: "terrain-mountain-button",
+          },
+          {
+            value: "Coastal",
+            label: "COASTAL",
+            class: "terrain-coastal-button",
+          },
+        ]}
+        onChange={props.onChange}
+        selected={props.selected}
+      />
       <p>
         <button onClick={props.nextStep}>Next Step</button>
       </p>

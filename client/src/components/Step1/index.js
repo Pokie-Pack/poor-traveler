@@ -21,28 +21,4 @@ function Step1(props) {
   );
 }
 
-const Step1 = (props) => {
-  const { data, handleChange, next } = props;
-  return (
-    <form>
-      <p>
-        <label htmlFor="Step1">Click your preferred CLIMATE please:</label>
-        <buttonWarm onClick={props.nextStep}>
-          WARM 🔥 value={data.name}
-          onChange={handleChange}
-        </buttonWarm>
-      </p>
-      <p>
-        <label htmlFor="Step1"></label>
-        <input
-          type="email"
-          name="email"
-          value={data.email}
-          onChange={handleChange}
-        />
-      </p>
-      <button onClick={next}>Next</button>
-    </form>
-  );
-};
 export default Step1;
