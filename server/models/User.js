@@ -27,7 +27,7 @@ const userSchema = new Schema({
   travelpackages: [
     {
       type: Schema.Types.ObjectId,
-      ref: "TravelPackages",
+      ref: "TravelPackage",
     },
   ],
 });

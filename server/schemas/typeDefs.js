@@ -27,7 +27,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    user: [User]
+    user: User
     travelPackages(
       activity: [String]
       location: String
