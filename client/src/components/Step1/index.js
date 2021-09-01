@@ -1,19 +1,22 @@
 import React from "react";
+import RadioButtons from "../RadioButtons";
 
 function Step1(props) {
   return (
-    <div class="container">
+    <div className="container">
       <h1> Step 1: Click your preferred CLIMATE please</h1>
-      <p1>
-        <buttonWarm onClick={props.nextStep}>WARM 🔥</buttonWarm>
-      </p1>
-      <p2>
-        <buttonChilly onClick={props.nextStep}>CHILLY 🧊</buttonChilly>
-      </p2>
-
-      <p3>
+      <RadioButtons
+        name="climate"
+        options={[
+          { value: "Warm", label: "WARM", class: "climate-warm-button" },
+          { value: "Chilly", label: "CHILLY", class: "climate-chilly-button" },
+        ]}
+        onChange={props.onChange}
+        selected={props.selected}
+      />
+      <p>
         <button onClick={props.nextStep}>Next Step</button>
-      </p3>
+      </p>
     </div>
   );
 }
