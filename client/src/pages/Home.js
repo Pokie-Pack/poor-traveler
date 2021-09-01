@@ -31,6 +31,7 @@ const Home = () => {
       <StepWizard>
         <Step1 onChange={handleStateChange} selected={formState.climate} />
         <Step2 />
+
         <Step3 />
         <Step4 />
       </StepWizard>

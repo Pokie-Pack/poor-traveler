@@ -9,7 +9,11 @@ function Step1(props) {
         name="climate"
         options={[
           { value: "Warm", label: "WARM", class: "climate-warm-button" },
-          { value: "Chilly", label: "CHILLY", class: "climate-chilly-button" },
+          {
+            value: "Chilly",
+            label: "CHILLY",
+            class: "climate-chilly-button",
+          },
         ]}
         onChange={props.onChange}
         selected={props.selected}
