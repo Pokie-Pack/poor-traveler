@@ -1,19 +1,17 @@
 import { gql } from "@apollo/client";
 
-export const QUERY_TravelPackage = gql`
-  {
-    query allTravelPackage {
+export const QUERY_TRAVELPACKAGE = gql`
+    query allTRAVELPACKAGE {
       travelpackage {
-        location,
-        climate,
-        topography,
-        airfare,
-        transportation,
-        lodging,
-        activity,
+        _id
+        location
+        climate
+        topography
+        airfare
+        transportation
+        lodging
+        activity
         cost
         }
       }
-    }
-  }
 `;
