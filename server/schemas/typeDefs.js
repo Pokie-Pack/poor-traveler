@@ -21,6 +21,11 @@ const typeDefs = gql`
     password: String
   }
 
+  type Auth {
+    token: ID
+    user: User
+  }
+
   type Query {
     user: [User]
     travelPackages(
@@ -28,15 +33,10 @@ const typeDefs = gql`
       location: String
       climate: String
       topography: String
-      airefare: Boolean
+      airfare: Boolean
       transportation: String
       lodging: String
     ): [TravelPackage]
-  }
-
-  type Auth {
-    token: ID
-    user: User
   }
 
   type Mutation {

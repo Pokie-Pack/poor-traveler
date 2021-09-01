@@ -17,6 +17,14 @@ const resolvers = {
 
       throw new AuthenticationError("Not logged in");
     },
+    travelPackages: async (parent, args, context) => {
+      const query = { ...args };
+
+      if (args.activity) {
+        query["activity"] = { $all: args.activity };
+      }
+      return await TravelPackage.find(query);
+    },
   },
   Mutation: {
     addUser: async (parent, args) => {
