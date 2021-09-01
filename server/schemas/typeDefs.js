@@ -28,6 +28,9 @@ const typeDefs = gql`
       location: String
       climate: String
       topography: String
+      airefare: Boolean
+      transportation: String
+      lodging: String
     ): [TravelPackage]
   }
 
