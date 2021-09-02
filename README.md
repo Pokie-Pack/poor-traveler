@@ -12,11 +12,12 @@ We learned how to use React for the front-end, get more familiar with implementi
 ## Table of Contents
 
 - [Links](#links)
-- [User Story](#userStory)
+- [UserStory](#userStory)
+- [Technologies](#technologies)
 - [Usage](#usage)
 - [Credits](#credits)
 - [Challenges](#challenges)
-- [Future Implementations](#future)
+- [FutureImplementations](#futureimplementations)
 - [Features](#features)
 - [Test](#test)
 
@@ -42,35 +43,45 @@ AS A < person who wants to go on vacation >
 I WANT < find a nice destination to relax/do fun things >
 SO THAT < I am taking a break from life >.
 
+## Technologies
+
+- React
+- Apollo Server
+- Apollo Client
+- Mongo
+- Mongoose
+
 ## Usage
 
 If not logged in:
 User may still go through the travel package survey but it will not allow user to favorite/save the package, only see the options available.
-`md ![Home](src/assets/images/project3Home.JPG `
+`md ![Home](src/assets/images/project3Home.JPG) `
 
 User will need to sign up before being able to log in!
-`md ![SignUp](src/assets/images/project3SignUP.JPG `
+`md ![SignUp](src/assets/images/project3SignUP.JPG) `
 
 If logged in:
 User can save/favorite travel packages after completing the site's survey and check out their favorites on a favorites page.
-`md ![LOGIN](src/assets/images/project3LOGIN.JPG `
+`md ![LOGIN](src/assets/images/project3LOGIN.JPG) `
 
 When entering site, steps for travel package will show, allowing user to choose of two or more options to progress through the travel package survey. When clicked, button will turn green which indicates that is the User's preference and will be saved into the database (until different within step pages are clicked).
-`md ![Btn Submit](src/assets/images/projectBtnSubmit.JPG `
+`md ![Btn Submit](src/assets/images/projectBtnSubmit.JPG) `
 
 ## Credits
 
 Contributors to this project:
-Alex Garcia https://github.com/AlexG1040
-Sareybodd (Rey) Chhorn https://github.com/LYBLRey
-Son Le https://github.com/Sonlocgiau
-Drew Gillespie https://github.com/drewg07
-Shane Le https://github.com/ShaneLe2121
-John F. Young https://github.com/johnfyoung
+
+- Alex Garcia https://github.com/AlexG1040
+- Sareybodd (Rey) Chhorn https://github.com/LYBLRey
+- Son Le https://github.com/Sonlocgiau
+- Drew Gillespie https://github.com/drewg07
+- Shane Le https://github.com/ShaneLe2121
+- John F. Young https://github.com/johnfyoung
 
 Useful links that helped us:
-https://www.npmjs.com/package/react-step-wizard
-https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas
+
+- https://www.npmjs.com/package/react-step-wizard
+- https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas
 
 ## Successes & Challenges
 
@@ -78,7 +89,7 @@ https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mon
 - Spelling case sensitive, confused the input the code about query to test the database on localhost 3001/graphpl.
 - Setting up the typedefs file wasn’t too difficult, just a few changes was needed.
 - I think our biggest struggle was in the front end, getting the right wizard to work or getting the right responses from the buttons.
-- also at one point, getting the server started was a problem but quickly resolved by the great john young.
+- Also at one point, getting the server started was a problem but quickly resolved by the great john young.
 - Deploying "final" version on heroku
 
 ## Features
@@ -90,8 +101,8 @@ https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mon
 
 ## Future Implementations
 
--add the option to actually purchase a travel package with working reservations
--the ability to add reviews, maybe somehow link it through yelp
+- Add the option to actually purchase a travel package with working reservations
+- The ability to add reviews, maybe somehow link it through yelp
 
 ## Tests
 
