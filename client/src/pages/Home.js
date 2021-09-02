@@ -46,7 +46,7 @@ const Home = () => {
         <Step6 onChange={handleStateChange} selected={formState.lodging}/>
 
       </StepWizard>
-          )};
+          )}
     </div>
   );
 };
