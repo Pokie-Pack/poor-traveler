@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-// import Jumbotron from "../components/Jumbotron";
+import { useQuery } from '@apollo/client';
+import { QUERY_TRAVELPACKAGE } from '../utils/queries';
+
 import StepWizard from "react-step-wizard";
 import Step1 from "../components/Step1";
 import Step2 from "../components/Step2";
 import Step3 from "../components/Step3";
 import Step4 from "../components/Step4";
+import Step5 from "../components/Step5";
+import Step6 from "../components/Step6";
 
 const Home = () => {
   const [formState, setFormState] = useState({
@@ -17,7 +21,9 @@ const Home = () => {
     activity: [],
   });
 
-  // TODO: how do I use useQuery from week 21 activites 13 and 14 to query the travel packages
+  
+  const { loading, data } = useQuery(QUERY_TRAVELPACKAGE);
+  const travelPackages = data?.travelPackages || [];
 
   const handleStateChange = (field, value) => {
     console.log(field + " was changed to " + value);
@@ -28,13 +34,19 @@ const Home = () => {
 
   return (
     <div className="container">
+       {loading ? (
+            <div>Loading...</div>
+          ) : (
       <StepWizard>
         <Step1 onChange={handleStateChange} selected={formState.climate} />
-        <Step2 />
+        <Step2 onChange={handleStateChange} selected={formState.location} />
+        <Step3 onChange={handleStateChange} selected={formState.topography}/>
+        <Step4 onChange={handleStateChange} selected={formState.airfare}/>
+        <Step5 onChange={handleStateChange} selected={formState.transportation}/>
+        <Step6 onChange={handleStateChange} selected={formState.lodging}/>
 
-        <Step3 />
-        <Step4 />
       </StepWizard>
+          )};
     </div>
   );
 };

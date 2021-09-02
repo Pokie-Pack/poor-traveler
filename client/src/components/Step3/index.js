@@ -4,7 +4,7 @@ import RadioButtons from "../RadioButtons";
 function Step3(props) {
   return (
     <div className="container">
-      <h1> Step 2: Click your preferred TERRAIN please</h1>
+      <h1> Step 3: Click your preferred TERRAIN please</h1>
       <RadioButtons
         name="topography"
         options={[
