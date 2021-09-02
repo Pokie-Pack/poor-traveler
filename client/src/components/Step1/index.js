@@ -8,8 +8,14 @@ function Step1(props) {
       <RadioButtons
         name="climate"
         options={[
-          { value: "Warm", label: "WARM", class: "climate-warm-button" },
-          { value: "Chilly", label: "CHILLY", class: "climate-chilly-button" },
+          { value: "Warm",
+           label: "WARM", 
+           class: "climate-warm-button" },
+          {
+            value: "Chilly",
+            label: "CHILLY",
+            class: "climate-chilly-button",
+          },
         ]}
         onChange={props.onChange}
         selected={props.selected}

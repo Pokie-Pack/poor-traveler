@@ -1,21 +1,27 @@
 import React from "react";
+import RadioButtons from "../RadioButtons";
 
 function Step4(props) {
   return (
-    <div>
-      <h1> Step 4: Preferred place to stay?</h1>
-      <p>
-        <button onClick={props.nextStep}>HOTEL</button>
-      </p>
-      <p>
-        <button onClick={props.nextStep}>HOSTEL</button>
-      </p>
-      <p>
-        <button onClick={props.nextStep}>B\&B</button>
-      </p>
-      <p>
-        <button onClick={props.previousStep}>Previous Step</button>
-      </p>
+    <div className="container">
+      <h1> Step 4: Do you need Air Fare?</h1>
+      <RadioButtons
+        name="airfare"
+        options={[
+          {
+            value: "Yes",
+            label: "YES",
+            class: "airfare-yes-button",
+          },
+          {
+            value: "No",
+            label: "NO",
+            class: "airfare-no-button",
+          },
+        ]}
+        onChange={props.onChange}
+        selected={props.selected}
+      />
       <p>
         <button onClick={props.nextStep}>Next Step</button>
       </p>
