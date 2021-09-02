@@ -80,7 +80,7 @@ Useful links that helped us:
 - Spelling case sensitive, confused the input the code about query to test the database on localhost 3001/graphpl.
 - Setting up the typedefs file wasn’t too difficult, just a few changes was needed.
 - I think our biggest struggle was in the front end, getting the right wizard to work or getting the right responses from the buttons.
-- also at one point, getting the server started was a problem but quickly resolved by the great john young.
+- Also at one point, getting the server started was a problem but quickly resolved by the great john young.
 - Deploying "final" version on heroku
 
 ## Features
@@ -92,8 +92,8 @@ Useful links that helped us:
 
 ## Future Implementations
 
--add the option to actually purchase a travel package with working reservations
--the ability to add reviews, maybe somehow link it through yelp
+- Add the option to actually purchase a travel package with working reservations
+- The ability to add reviews, maybe somehow link it through yelp
 
 ## Tests
 
