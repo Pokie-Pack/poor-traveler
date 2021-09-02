@@ -4,7 +4,7 @@ import RadioButtons from "../RadioButtons";
 function Step4(props) {
   return (
     <div className="container">
-      <h1> Step 3: Do you need Air Fare?</h1>
+      <h1> Step 4: Do you need Air Fare?</h1>
       <RadioButtons
         name="airfare"
         options={[

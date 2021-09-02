@@ -8,7 +8,9 @@ function Step1(props) {
       <RadioButtons
         name="climate"
         options={[
-          { value: "Warm", label: "WARM", class: "climate-warm-button" },
+          { value: "Warm",
+           label: "WARM", 
+           class: "climate-warm-button" },
           {
             value: "Chilly",
             label: "CHILLY",

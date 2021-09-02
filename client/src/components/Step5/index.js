@@ -4,11 +4,13 @@ import RadioButtons from "../RadioButtons";
 function Step5(props) {
   return (
     <div className="container">
-      <h1> Step 4: Preferred transportation:</h1>
+      <h1> Step 5: Preferred transportation:</h1>
       <RadioButtons
         name="transportation"
         options={[
-          { value: "Car", label: "CAR", class: "transportation-car-button" },
+          { value: "Car", 
+          label: "CAR", 
+          class: "transportation-car-button" },
           {
             value: "Cruise",
             label: "CRUISE",
