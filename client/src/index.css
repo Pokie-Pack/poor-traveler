@@ -16,6 +16,9 @@
 html,
 body {
   min-height: 100%;
+  background-image: url("https://dx5683gi1tv0w.cloudfront.net/dtrjyhj9q/image/upload/w_1920/s3/img02zd8w278");
+  background-repeat: no-repeat;
+  background-size: 100% 1378px;
 }
 
 body {
@@ -112,7 +115,7 @@ button {
   color: white;
 }
 
-buttonChilly {
+.climate-chilly-button {
   font-size: 3rem;
   text-decoration: none;
   padding: 1rem 1rem;
@@ -195,6 +198,7 @@ input:focus {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 200px 0;
 }
 
 .flex-row {
